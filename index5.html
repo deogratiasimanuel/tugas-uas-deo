@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="style5.css">
+    
+    <script type="text/javascript">
+        
+        function can() {
+            name = document.forms["form1"]["fname"].value;
+            pass = document.forms["form1"]["pwd"].value;
+
+            if (name == "")
+            {
+                alert("Please enter username!..")
+            }
+            if (pass == "")
+            {
+                alert("Please enter password!..")
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a class="logo" href="">Helmet Shop</a>
+        <input type="checkbox" id="tog_but">
+        <label for="tog_but" class="tog_but">
+            <span class="rab"></span>
+            <span class="rab"></span>
+            <span class="rab"></span>
+        </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="ex_li">
+                <input type="checkbox" id="pro_box">
+                <label for="pro_box">Products</label>
+                <ul class="drop">
+                    <li><a href="index3a.html">Full Face</a></li>
+                    <li><a href="index3b.html">Half Face</a></li>
+                    <li><a href="index3c.html">Miscellaneous</a></li>
+                </ul>
+            </li>
+            <li><a href="index2.html">About Us</a></li>
+            <li><a href="index4.html">Register</a></li>
+            <li><a href="index5.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="center">
+        <h1>Login</h1>
+        <form method="post" id="form1">
+            <div class="text-field">
+                <input type="text" name="fname" id="fname" autocomplete="off">
+                <span></span>
+                <label for="username">Username</label>
+            </div>
+            <div class="text-field">
+                <input type="password" name="pwd" id="pwd">
+                <span></span>
+                <label for="password">Password</label>
+            </div>
+            <div class="pass"><a href="#">Forgot password?</a></div>
+                <a href="index.html"><input type="submit" name="" value="Login" onclick="can()"></a>
+            
+            <div class="signup_lnk">
+                Don't have account?<a href="index4.html">SignUp</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style4.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <nav>
+        <a class="logo" href="">Helmet Shop</a>
+        <input type="checkbox" id="tog_but">
+        <label for="tog_but" class="tog_but">
+            <span class="rab"></span>
+            <span class="rab"></span>
+            <span class="rab"></span>
+        </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="ex_li">
+                <input type="checkbox" id="pro_box">
+                <label for="pro_box">Products</label>
+                <ul class="drop">
+                    <li><a href="index3a.html">Full Face</a></li>
+                    <li><a href="index3b.html">Half Face</a></li>
+                    <li><a href="index3c.html">Miscellaneous</a></li>
+                </ul>
+            </li>
+            <li><a href="index2.html">About Us</a></li>
+            <li><a href="index4.html">Register</a></li>
+            <li><a href="index5.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <form id="form" action="/">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control2">
+                <label for="gender">Gender</label>
+                <p class="pgen"><input id="gender" name="gender" type="radio">Pria
+                <input id="gender" name="gender" type="radio">Wanita
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="kota">Kota</label>
+                <select name="kota" id="kota">
+                    <option value="timika">Timika</option>
+                    <option value="jayapura">Jayapura</option>
+                    <option value="jakarta">Jakarta</option>
+                    <option value="bandung">Bandung</option>
+                    <option value="manado">Manado</option>
+                    <option value="medan">Medan</option>
+                    <option value="makassar">Makassar</option>
+                    <option value="kupang">Kupang</option>
+                </select>
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Password again</label>
+                <input id="password2"name="password2" type="password">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <footer>
+        <p align="center">
+            <a href="https://www.facebook.com" target="_blank"><img src="fb.png" width="50" height="50"></a>
+            &nbsp; &nbsp;  &nbsp;
+            <a href="https://www.instagram.com" target="_blank"><img src="ig.png" width="50" height="50"></a>
+            &nbsp; &nbsp;  &nbsp;
+            <a href="https://www.twitter.com" target="_blank"><img src="twitter.png" width="50" height="50"></a>
+        </p>
+        <br>
+        <p align="center"><em>
+            Copyright @2022 Tugas UAS Deogratias Imanuel
+        </em>
+        </p>
+    </footer>
+</body>
+</html>

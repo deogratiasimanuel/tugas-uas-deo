@@ -1,0 +1,289 @@
+:root {
+    --background-color: #ff0000;
+    --darker-background-color: #8b0000;
+    --accent-color: #ffa500;
+    --text-color: #ffffff;
+    --navbar-height:80px
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background: linear-gradient(to right,teal,black);
+}
+nav{
+    height: var(--navbar-height);
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+nav .logo {
+    margin-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-variant:small-caps ;
+    text-decoration: none;
+    color: var(--text-color);
+}
+nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    color: var(--text-color);
+}
+nav li {
+    height: 100%;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    color: var(--text-color);
+}
+nav li:hover {
+    background: var(--accent-color);
+}
+nav ul a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.drop{
+    height: min-content;
+    width: 200px;
+    background: var(--background-color);
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: var(--navbar-height);
+    color: var(--text-color);
+}
+.drop li{
+    height: 70px;
+    width: 100%;
+}
+.drop li a{
+    justify-content: flex-start;
+    padding-left: 30px;
+    width: calc(100%-30px);
+}
+nav li:hover .drop{
+    display: flex;
+}
+nav input[type="checkbox"]{
+    display: none;
+}
+.ex_li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tog_but {
+    width: 30px;
+    height: 23px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rab {
+    height: 4px;
+    width: 100%;
+    background: var(--text-color);
+}
+footer {
+    margin-top: 30px;
+}
+@media(max-width: 850px) {
+    .tog_but{
+        display: flex;
+    }
+    nav ul {
+        height: min-content;
+        width: 100%;
+        background-color: var(--background-color);
+        display: block;
+        position: absolute;
+        top: var(--navbar-height);
+    }
+    nav li{
+        height: min-content;
+        width: 100%;
+    }
+    nav ul a{
+        padding: 30px 0;
+    }
+    .ex_li {
+        display: block;
+    }
+    .ex_li label{
+        padding: 30px;
+        cursor: pointer;
+        display: block;
+    }
+    .ex_li:hover .drop{
+        display: none;
+    }
+    .ex_li[type="checkbox"]:checked~.drop{
+        display: block;
+    }
+    nav ul {
+        height: min-content;
+        width: 100%;
+        background-color: var(--background-color);
+        display: none;
+        position: absolute;
+        top: var(--navbar-height);
+    }
+    nav li{
+        height: min-content;
+        width: 100%;
+    }
+    nav ul a{
+        padding: 30px 0;
+    }
+    .ex_li {
+        display: block;
+    }
+    .ex_li label{
+        padding: 30px;
+        cursor: pointer;
+        display: block;
+    }
+    .ex_li:hover.drop{
+        display: none;
+    }
+    .ex_li input[type="checkbox"]:checked~.drop{
+        display: block;
+    }
+    .drop{
+        position: static;
+        width: 100%;
+    }
+    .drop li{
+        padding: 0;
+        display: block;
+        position: static;
+        background: var(--darker-background-color);
+    }.drop li a{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
+    #tog_but:checked~ul{
+        display: block;
+    }
+    
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+.center h1 {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+}
+.center form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .text-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.text-field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.text-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.text-field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--darker-background-color);
+    transition: .5s;
+}
+.text-field input:focus ~ label,
+.text-field input:valid ~ label {
+    top:  -5px;
+    color: var(--darker-background-color);
+}
+.text-field input:focus ~ span::before,
+.text-field input:valid ~ span::before {
+   width: 100%;
+}
+.pass a {
+    margin: -5px 0 20px 5px;
+    color: var(--background-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+.pass a:hover{
+    text-decoration: underline;
+}
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: var(--accent-color);
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover {
+    border-color: var(--accent-color);
+    transition: .5s;
+}
+.signup_lnk {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+.signup_lnk a {
+    color: var(--background-color);
+    text-decoration: none;
+}
+.signup_lnk a:hover {
+    text-decoration: underline;
+}
